@@ -3,7 +3,7 @@ class apache::config (
 	String $configfile   = lookup( {"name" => "apache.configfile", "default_Value"   => ""} ),
 	String $vhostsource  = lookup( {"name" => "apache.vhostsource", "default_value"  => ""} ),
 	String $vhostfile    = lookup( {"name" => "apache.vhostfile",  "default_value"   => ""} )
-) {
+	) {
 	file { 'config-file':
 		path => $configfile,
 		ensure => file,
